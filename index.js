@@ -52,10 +52,10 @@ console.log('myArray: ', myArray);
 //do while execute au moins une fois
 
 //boucle for
-for (let i=0; i < myArray.lenght ; index++) {
+for (let i=0; i < myArray.length ; i++) {
     const element = myArray[i];
     console.log(element);
-} //fail
+}
 
 //V2
 for (const value of myArray) {
