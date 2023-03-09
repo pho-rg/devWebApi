@@ -1,4 +1,4 @@
-//premiere serie d exercices
+//premiere serie d exercices ; tableaux
 
 //exo1
 const myTab = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
