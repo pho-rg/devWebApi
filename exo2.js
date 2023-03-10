@@ -45,31 +45,61 @@ const verbeux = (myNum) => {
     let flag = 0;
     const unit = myNum%10;
     const diz = ((myNum - unit)/10) -1;
+
     if (myNum < 17) {flag = 1} 
     else if (unit === 0) {flag = 2}
-
+    else if (unit === 1) {flag = 3}
+    else if (myNum === 71 || myNum === 91) {flag = 4}
+    //else if (71 < myNum < 77 || 91 < myNum < 97) {flag = 5}
+    else {flag = 6}
+    
     switch (flag) {
         case 1:
             return unite[myNum];
-            break;
         case 2:
             return dizaine[diz];
-            break;
+        case 3:
+            return myResult = dizaine[diz] + ' et ' + unite[1];
+        case 4:
+            return myResult = dizaine[diz-1] + ' et ' + unite[11];
+        case 5:
+            return myResult = dizaine[diz-1] +  unite[unit+10];
+        case 6:
+            return myResult = dizaine[diz] + ' ' + unite[unit];
         default:
             console.log('Out of bound');
+            break;
     }
-    // if (myNum < 10) {
-        
-    // } else {
-    //     const unit = myNum%10;
-    //     const diz = ((myNum - unit)/10) -1;
-    //     let result = dizaine[diz];
-    //     result += ' ' + unite[unit];
-    //     return result;
-    // }
 }
 
 console.log('exo5');
-console.log(verbeux(13));
+console.log(verbeux(22));
 
 //exo6
+myObj = [
+    {"nom": "Dumbo", "espece": "Eléphant", "age": 50},
+    {"nom": "Booba", "espece": "Ours", "age": 8}
+   ];
+
+const myValue = (myTab, carac) => {
+    let tabRes = [];
+    let i = 0;
+    for (let o in myTab) {
+        tabRes[i] = myTab[o].keys(carac);
+        i += 1;
+    }
+    return tabRes;
+}
+
+console.log('exo6')
+console.log(myValue(myObj, "nom"));
+
+//exo7
+const myNum2 = [2, 4, 6, 3, 7, 5];
+
+const triDesc = (myTab) => {
+    return myTab.sort().reverse();
+}
+
+console.log('exo7');
+console.log(triDesc(myNum2));
