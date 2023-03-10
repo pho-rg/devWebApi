@@ -77,29 +77,37 @@ console.log(verbeux(22));
 
 //exo6
 myObj = [
-    {"nom": "Dumbo", "espece": "Eléphant", "age": 50},
-    {"nom": "Booba", "espece": "Ours", "age": 8}
+    {nom: "Dumbo", espece: "Eléphant", age: 50},
+    {nom: "Booba", espece: "Ours", age: 8}
    ];
 
-const myValue = (myTab, carac) => {
-    let tabRes = [];
-    let i = 0;
-    for (let o in myTab) {
-        tabRes[i] = myTab[o].keys(carac);
-        i += 1;
-    }
-    return tabRes;
+function getPropertyValues(tab, proper) {
+    return tab.map(function(objet) {
+        return objet[proper]
+    })
 }
 
-console.log('exo6')
-console.log(myValue(myObj, "nom"));
+console.log('exo6');
+console.log(getPropertyValues(myObj, "espece"));
+
+// const myValue = (myTab, carac) => {
+//     let tabRes = [];
+//     let i = 0;
+//     for (let o in myTab) {
+//         tabRes[i] = myTab[o].keys(carac);
+//         i += 1;
+//     }
+//     return tabRes;
+// }
 
 //exo7
 const myNum2 = [2, 4, 6, 3, 7, 5];
 
 const triDesc = (myTab) => {
-    return myTab.sort().reverse();
+    return myTab.sort((a, b) => b - a);
 }
 
 console.log('exo7');
 console.log(triDesc(myNum2));
+
+//exo8
