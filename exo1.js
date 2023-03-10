@@ -48,7 +48,7 @@ console.log(myMonth[2]);
 
 //exo9
 const myNum = [2, 8, 7, 3, 9];
-console.log(Math.min(...myNum));
+console.log(Math.min(...myNum)); //... est le rest operator ou spread operator
 console.log(Math.max(...myNum));
 
 //exo10
