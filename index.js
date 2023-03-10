@@ -77,3 +77,6 @@ for (const key in myObject) {
     }
 }
 
+//fetch
+fetch('https://google.com')
+.then 
